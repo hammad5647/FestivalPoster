@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/nameBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#B0D883"
+        android:elevation="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_menu_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:gravity="center"
+
+            android:text="Festival Post"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/imageMahavir"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/nameBar"
+        android:layout_margin="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/indianflag" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="15dp"
+                android:text="Festivals Of Culture"
+                android:textStyle="italic" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageMahavir">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/upcomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/upcomFest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Upcoming Festivals"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/upcomViewBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/viewshape">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="View All"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/UpcomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upcomBar"
+                android:layout_marginHorizontal="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/navratriFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/navratriImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/navratri"></ImageView>
+
+                        <TextView
+                            android:id="@+id/navratriName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/navratriImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Navratri" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ramnavmifest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/navratriFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ramnavmiImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ramnavmi1"></ImageView>
+
+                        <TextView
+                            android:id="@+id/ramnavmiName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ramnavmiImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Ram Navmi" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eidFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/ramnavmifest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/eidImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/eidulfitr"></ImageView>
+
+                        <TextView
+                            android:id="@+id/eidName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/eidImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Eid-ul-Fitr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/diwaliFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/eidFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/diwaliImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/diwali"></ImageView>
+
+                        <TextView
+                            android:id="@+id/diwaliName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/diwaliImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Diwali" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/utranFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/diwaliFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/utranImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/utran" />
+
+                        <TextView
+                            android:id="@+id/makarsakrantiName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/utranImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Makar Sakranti" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/eidulAdhaFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/utranFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/eidulAdhaImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/eiduladha" />
+
+                        <TextView
+                            android:id="@+id/eiduladhaName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/eidulAdhaImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Eid-ul-Adha" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rakshabandhanFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/eidulAdhaFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/rakshabandhanImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/rakshabandhan" />
+
+                        <TextView
+                            android:id="@+id/rakshabandhanName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rakshabandhanImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Rakshabandhan" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dhanterasFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/rakshabandhanFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/dhanterasImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/dhanteras" />
+
+                        <TextView
+                            android:id="@+id/dhanterasName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dhanterasImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Dhanteras" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gudipadwaFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/dhanterasFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/gudipadwaImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/gudipadwa" />
+
+                        <TextView
+                            android:id="@+id/gudipadwaName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gudipadwaImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Gudipadwa" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/holiFest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/gudipadwaFest"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/holiImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/holi" />
+
+                        <TextView
+                            android:id="@+id/holiName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/holiImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Holi" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/currentBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UpcomLayout"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/currentFest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Current Festivals"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/currentViewBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/viewshape">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="View All"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/currentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentBar"
+                android:layout_marginHorizontal="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/navratriFest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/navratriImage2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/shivratri"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/navratriImage2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Maha Shivratri" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ramnavmifest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/navratriFest2"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ramnavmiImage2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/hanumanjayanti"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ramnavmiImage2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Hanuman Jayanti" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/ramnavmifest2"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/dussehraImage2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bhaidujh"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dussehraImage2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Bhai Dooj" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/recentBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentLayout"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/recentFest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Recent Festivals"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/recentViewBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/viewshape">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="View All"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/recentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recentBar"
+                android:layout_marginHorizontal="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/navratriFest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/navratriImage3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ganeshchaturthi"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/navratriImage3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Ganesh Chaturthi" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ramnavmifest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_toEndOf="@+id/navratriFest3"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ramnavmiImage3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/buddhapurn"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ramnavmiImage3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Buddha Purnima" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/ramnavmifest3"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/dussehraImage3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dussehra"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dussehraImage3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Dussehra" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

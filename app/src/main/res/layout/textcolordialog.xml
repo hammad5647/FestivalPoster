@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/edittextdialogue"
+    >
+
+    <TextView
+        android:id="@+id/bgColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Font Color"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/bgColorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bgColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/bgBlack"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#000000">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bgGrey"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#A9A9A7">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bgWhite"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@color/white">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgYellow"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#FFC107">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgGreen"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#8BC34A">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgBlue"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#3F51B5">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgOrange"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#FF5722">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgPurple"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="#DA66BD">
+
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <HorizontalScrollView
+        android:id="@+id/fontEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bgColorLayout">
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/fontColorOkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fontEdit"
+        android:layout_alignEnd="@+id/fontEdit"
+        android:layout_margin="30dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ok"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
+<!--<RelativeLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_margin="10dp">-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/businessName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="20dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/companyName"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:background="@drawable/editer_roundshape">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/businessImage"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/baseline_business_center_24" />-->
+
+<!--        </RelativeLayout>-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/phoneCall"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:layout_toEndOf="@id/businessName">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/phoneNumber"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:background="@drawable/editer_roundshape">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/callImage"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/baseline_call_24" />-->
+
+<!--        </RelativeLayout>-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/emailAdd"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:layout_toEndOf="@id/phoneCall">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/emailImage"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:background="@drawable/editer_roundshape">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/baseline_email_24" />-->
+<!--        </RelativeLayout>-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/businessTxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/phoneCall"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Business Name" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/numberTxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/phoneCall"-->
+<!--        android:layout_marginLeft="22dp"-->
+<!--        android:layout_toEndOf="@id/businessTxt"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Phone Number" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/emailTxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/emailAdd"-->
+<!--        android:layout_marginLeft="28dp"-->
+<!--        android:layout_toEndOf="@id/numberTxt"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Email Address" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/editTxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="15dp"-->
+<!--        android:layout_toEndOf="@+id/emailAdd"-->
+<!--        android:background="@drawable/editer_roundshape">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@drawable/editfont" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/sizeTxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/editTxt"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_toEndOf="@id/emailTxt"-->
+<!--        android:text="Text Size" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/txtColor"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="15dp"-->
+<!--        android:layout_toEndOf="@+id/editTxt"-->
+<!--        android:background="@drawable/editer_roundshape">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@drawable/editfontcolor" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/txtColor"-->
+<!--        android:layout_marginLeft="47dp"-->
+<!--        android:layout_toEndOf="@id/sizeTxt"-->
+<!--        android:text="Text Color" />-->
+
+<!--</RelativeLayout>-->
+<!--    </HorizontalScrollView>-->
